@@ -1,0 +1,51 @@
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 8px;
+    padding-left: 12px;
+    border-radius: 15px;
+    border: 3px solid #39A49E;
+    ;
+    background-color: transparent;
+    color: #215c59;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.container:hover {
+    border: 3px solid #39A49E;
+    background-color: rgba(57, 164, 158, 0.1);
+}
+
+.completed {
+    color: white;
+    border: 3px solid rgba(57, 164, 158, 0.4);
+    background-color: rgba(57, 164, 158, 0.7);
+}
+
+.completed:hover {
+    /* transform: scale(1.05); */
+    border: 3px solid rgba(57, 164, 158, 0.4);
+    background-color: rgba(57, 164, 158, 1);
+}
+
+.todo_title {
+    width: 400px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .todo_title {
+        font-size: 14px;
+        width: 100%;
+    }
+}

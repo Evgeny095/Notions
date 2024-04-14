@@ -1,0 +1,57 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+}
+
+.container h2 {}
+
+.container h2 span {
+    color: coral;
+    opacity: 1;
+}
+
+
+.img_wrap {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.working {
+
+    width: 600px;
+    max-height: 550px;
+    object-fit: cover;
+
+    /* position: absolute;
+    left: 32%;
+    bottom: 10%;
+    z-index: -1; */
+}
+
+
+.header {
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0.8;
+    position: relative;
+}
+
+.btn_container {
+    height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        font-size: 18px;
+    }
+}

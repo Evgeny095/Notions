@@ -1,0 +1,43 @@
+.header{
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 50px;
+    grid-template-columns: 2fr 5fr;
+    grid-template-areas: 
+    "login  nav"
+    "navigate .";
+}
+
+.navigate{
+    grid-area: navigate;
+    text-align: left;
+}
+
+
+.login{
+    grid-area: login;
+    padding-left: 5px;
+}
+
+.header__nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+.header__link{
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.header__link:hover{
+    opacity: 0.7;
+}

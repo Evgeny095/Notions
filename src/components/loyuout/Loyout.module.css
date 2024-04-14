@@ -1,0 +1,234 @@
+.wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    width: 80%;
+    min-height: calc(100vh - 50px);
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: lightgrey;
+}
+
+.header {
+    padding-top: 40px;
+    /* padding-left: 50px; */
+    margin-bottom: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 2fr 5fr 2fr;
+    grid-template-areas:
+        "logo  nav login"
+        "navigate . .";
+    position: relative;
+}
+
+/* .header:before{
+    position:absolute;
+    bottom: 0;
+    left:25%;
+    width:50%;
+    border-top: 4px solid #000;
+    border-radius: 5px;
+    content:"";
+} */
+
+
+.logo {
+    grid-area: logo;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.navigate {
+    grid-area: navigate;
+    text-align: left;
+}
+
+
+.login {
+    grid-area: login;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 0.8px;
+    text-align: right;
+}
+
+.login_container {
+    grid-area: login;
+}
+
+.login span {
+    color: coral;
+}
+
+.header__nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+}
+
+
+.header__nav:before {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    border-top: 4px solid #000;
+    border-radius: 5px;
+    content: "";
+}
+
+
+.header__link {
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 22px;
+    color: black
+}
+
+
+
+.setActive {
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 22px;
+    padding-bottom: 2px;
+    color: coral;
+    font-weight: bold;
+}
+
+.header__link:hover {
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .header__nav {
+        gap: 40px;
+    }
+
+    .header__link {
+        font-size: 18px;
+    }
+
+    .setActive {
+        font-size: 18px;
+    }
+
+    .login {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 100vw;
+        min-width: 100vw;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+    }
+
+    .header__nav_burger {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: coral;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        z-index: +5;
+    }
+
+    .header__link {
+        font-size: 22px;
+        color: white;
+    }
+
+    .setActive {
+        font-size: 22px;
+        color: white;
+        text-decoration: underline;
+
+    }
+
+    .burge_btn {
+        height: 70px;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        grid-area: nav;
+    }
+
+    .burge_btn img {
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .header {
+        padding-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 100px;
+        grid-template-columns: 2fr 5fr 2fr;
+        grid-template-areas:
+            "logo . nav"
+            "login . .";
+        position: relative;
+        border-bottom: 1px solid black;
+    }
+
+    .logo {
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .login_container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        grid-column: span 3;
+    }
+}

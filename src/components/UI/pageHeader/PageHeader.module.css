@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 35px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.right_element {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+
+    .text {
+        font-size: 18px;
+        grid-area: header;
+        grid-column: span 3;
+        text-align: center;
+    }
+
+    .left_element {
+        grid-area: lefel;
+        grid-column: span 2;
+    }
+
+    .right_element {
+        grid-area: rightel;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            ". header ."
+            "lefel . rightel";
+        gap: 10px;
+    }
+}

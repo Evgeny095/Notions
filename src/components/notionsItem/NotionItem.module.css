@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+.button {
+    background-color: transparent;
+    border-radius: 10px;
+    /* border: 3px solid rgba(173, 184, 206,0.5);
+    background-color: rgba(145, 185, 197, 0.3); */
+    border: 5px solid rgba(57, 164, 158, 0.5);
+    background-color: #39A49E;
+    /* border:3px solid rgba(255, 127, 80,0.2);;
+    background-color: rgba(255, 127, 80,0.7); */
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    min-height: 70px;
+    transition: all 0.5s ease;
+    text-align: center;
+    /* box-shadow: 0px 5px 10px 2px rgba(255, 127, 80,0.7); */
+    font-weight: bold;
+    color: white;
+}
+
+.button:hover {
+
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px 2px rgba(57, 164, 158, 0.75);
+    /* box-shadow: 0px 5px 10px 2px rgba(255, 127, 80,0.7); */
+}
+
+.onPage {
+    min-width: 800px;
+    padding: 30px;
+    box-shadow: 0px 5px 10px 2px rgba(57, 164, 158, 0.75);
+    resize: both;
+    overflow: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .button {
+        min-height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .onPage {
+        min-width: 90vw;
+    }
+}

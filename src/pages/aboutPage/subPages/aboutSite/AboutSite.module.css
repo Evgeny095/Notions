@@ -1,0 +1,21 @@
+.test{
+    color: black;
+}
+
+.content{
+    text-align: center;
+}
+.content p{
+    font-size: 18px;
+
+}
+.content > p >span{
+    color: coral;
+    font-weight: bold;
+}
+
+.content>p>a {
+    color: coral;
+    font-weight: bold;
+    text-decoration: none;
+}

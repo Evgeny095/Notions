@@ -1,0 +1,57 @@
+.test {
+    color: black;
+}
+
+.about {
+    width: 100%;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding-bottom: 40px;
+}
+
+.links ::after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: black;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: coral;
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        place-items: center;
+    }
+
+    .links a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+
+    .links a {
+        font-size: 14px;
+    }
+}

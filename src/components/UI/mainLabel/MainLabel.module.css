@@ -1,0 +1,16 @@
+.label {
+
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #39A49E;
+
+}
+
+@media screen and (max-width: 768px) {
+    .label {
+
+        font-size: 16px;
+
+    }
+}
